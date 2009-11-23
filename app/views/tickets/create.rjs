@@ -1,0 +1,7 @@
+if @error
+  page.replace_html("result", :partial => "form", :object => @ticket)
+else
+  page.insert_html(:top, "ticket", :partial => "row", :locals => {:ticket => @ticket})
+  page.visual_effect :highlight, "#ticket tr:first", :duration => 1.5
+  page << "closePopup()"
+end

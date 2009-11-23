@@ -1,0 +1,10 @@
+<tr id="ticket<%=ticket.id%>">
+  <td><%=h ticket.title %></td>
+  <td><%=h ticket.description %></td>
+  <td><%= link_to_remote "Show",
+           :url => { :action => "show", :id => ticket.id }, :method => :get %></td>
+  <td><%= link_to_remote "Edit",
+           :url => { :action => "edit", :id => ticket.id }, :method => :get %></td>
+  <td><%= link_to_remote "Delete",
+           :url => { :action => "destroy", :id => ticket.id }, :method => :delete,:confirm => "Are you sure?" %></td>
+</tr>

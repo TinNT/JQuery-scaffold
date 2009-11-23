@@ -1,0 +1,19 @@
+<h1>JQuery POST/GET/PUT/DELETE</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+    <tbody  id="ticket">
+    <% @tickets.each do |ticket| %>
+       <%= render :partial => "row",:locals => {:ticket => ticket}%>
+    <% end %>
+  </tbody>
+</table>
+<br />
+<td><%= link_to_remote "New ticket",
+         :url => { :action => "new"}, :method => :get %></td>
+<div id="result">
+</div>
+<div id="error">
+</div>

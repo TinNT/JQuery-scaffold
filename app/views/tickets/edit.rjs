@@ -1,0 +1,2 @@
+page.replace_html("result", :partial => "form", :object => @ticket)
+page << "openPopup()"

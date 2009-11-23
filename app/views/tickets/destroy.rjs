@@ -1,0 +1,2 @@
+page.visual_effect :highlight, "ticket#{@ticket.id}",:duraction => 0.5
+page.visual_effect :fade, "ticket#{@ticket.id}",:duraction => 0.5
